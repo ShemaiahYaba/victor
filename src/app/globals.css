@@ -1,0 +1,94 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif; /* Default body font set here as fallback, tailwind config takes precedence */
+}
+
+@layer base {
+  :root {
+    --background: 210 30% 96%; /* Very Light Cool Gray/Blue */
+    --foreground: 210 40% 25%; /* Dark Grayish Blue */
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 25%;
+    --primary: 210 70% 55%; /* Vibrant Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 40% 90%; /* Light Blue-Gray */
+    --secondary-foreground: 210 50% 35%; /* Medium Grayish Blue */
+    --muted: 210 35% 93%; /* Lighter version of secondary or slightly off-background */
+    --muted-foreground: 210 30% 50%; /* Medium-Light Grayish Blue */
+    --accent: 205 65% 75%; /* Lighter Desaturated Blue */
+    --accent-foreground: 210 50% 20%; /* Dark Blue for text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 30% 85%; /* Blue-Gray Border */
+    --input: 210 30% 90%; /* Slightly darker than border for input backgrounds */
+    --ring: 205 65% 75%; /* Accent color for rings */
+    --chart-1: 210 70% 55%; /* Primary Blue */
+    --chart-2: 180 50% 45%; /* Teal */
+    --chart-3: 230 60% 65%; /* Indigo/Purpleish Blue */
+    --chart-4: 30 80% 60%; /* Orange - for contrast if needed */
+    --chart-5: 120 40% 55%; /* Green - for contrast if needed */
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors, adjusted to new theme */
+    --sidebar-background: 210 40% 92%; /* Slightly darker than main background or a distinct light blue */
+    --sidebar-foreground: 210 40% 20%; /* Darker blue for sidebar text */
+    --sidebar-primary: 210 70% 50%; /* Slightly deeper blue for sidebar primary */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 205 65% 70%; /* Sidebar accent */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 30% 80%;
+    --sidebar-ring: 205 65% 75%;
+  }
+
+  .dark {
+    --background: 210 30% 12%; /* Dark Blue-Gray */
+    --foreground: 210 25% 88%; /* Light Grayish Blue */
+    --card: 210 28% 16%; /* Slightly Lighter Dark Blue-Gray */
+    --card-foreground: 210 25% 88%;
+    --popover: 210 30% 12%;
+    --popover-foreground: 210 25% 88%;
+    --primary: 210 70% 65%; /* Lighter Blue for Dark Mode */
+    --primary-foreground: 210 80% 15%; /* Very Dark Blue */
+    --secondary: 210 30% 25%; /* Medium Dark Blue-Gray */
+    --secondary-foreground: 210 25% 80%;
+    --muted: 210 30% 22%;
+    --muted-foreground: 210 25% 65%;
+    --accent: 205 60% 70%; /* Dark Mode Accent */
+    --accent-foreground: 210 80% 10%; /* Very Dark Blue for text on accent */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 25% 30%; /* Darker Blue-Gray Border */
+    --input: 210 28% 20%;
+    --ring: 205 60% 70%; /* Dark Mode Accent for rings */
+    --chart-1: 210 70% 65%;
+    --chart-2: 180 55% 55%;
+    --chart-3: 230 65% 70%;
+    --chart-4: 30 75% 65%;
+    --chart-5: 120 45% 60%;
+
+    /* Dark Sidebar specific colors */
+    --sidebar-background: 210 30% 10%; /* Even Darker Blue-Gray for Sidebar */
+    --sidebar-foreground: 210 25% 85%;
+    --sidebar-primary: 210 70% 60%;
+    --sidebar-primary-foreground: 210 80% 12%;
+    --sidebar-accent: 205 60% 65%;
+    --sidebar-accent-foreground: 210 80% 10%;
+    --sidebar-border: 210 25% 25%;
+    --sidebar-ring: 205 60% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
